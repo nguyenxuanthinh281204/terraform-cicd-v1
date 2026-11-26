@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "ap-northeast-1"
+}
+
 data "aws_ami" "amzn_ami_linux" {
   most_recent = true
   owners      = ["amazon"]
