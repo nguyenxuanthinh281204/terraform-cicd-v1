@@ -13,7 +13,7 @@ data "aws_ami" "amzn_ami_linux" {
 }
 
 resource "aws_instance" "Web_server" {
-  ami           = data.aws_ami.amzn_ami_linux
+  ami           = data.aws_ami.amzn_ami_linux.id
   instance_type = "t2.micro"
   tags = {
     Name = "WebServer-${terraform.workspace}"
